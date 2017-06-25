@@ -11,7 +11,7 @@
         "creationTimestamp": null
       },
       "spec": {
-        "dockerImageRepository": "lbroudoux/s2i-java-apm",
+        "dockerImageRepository": "emryl/s2i-java-apm",
         "tags": [
           {
             "name": "latest",
@@ -20,7 +20,7 @@
               "iconClass": "icon-java",
               "tags": "java,spring,apm",
               "supports": "java:8,java",
-              "sampleRepo": "http://github.com/mry/spring-boot-hello.git"
+              "sampleRepo": "https://github.com/mry/spring-boot-hello.git"
             }
           }
         ]
