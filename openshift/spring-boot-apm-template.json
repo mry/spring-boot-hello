@@ -29,7 +29,7 @@
         {
             "description": "Git source URI for application",
             "name": "SOURCE_REPOSITORY_URL",
-            "value": "http://github.com/lbroudoux/spring-boot-hello.git",
+            "value": "http://github.com/mry/spring-boot-hello.git",
             "required": true
         },
         {
