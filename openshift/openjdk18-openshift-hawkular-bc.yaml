@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: List
+Items:
+- apiVersion: v1
+  kind: ImageStream
+  metadata:
+    labels:
+      application: openjdk18-openshift-hawkular
+    name: openjdk18-openshift-hawkular
+  spec: {}
+  status:
+    dockerImageRepository: ""
+- apiVersion: v1
+  kind: BuildConfig
+  metadata:
+    labels:
+      app: openjdk18-openshift-hawkular
+    name: openjdk18-openshift-hawkular
+  spec:
+    output:
+      to:
+        kind: ImageStreamTag
+        name: openjdk18-openshift-hawkular:latest
+    resources: {}
+    source:
+      type: Git
+      git:
+        ref: master
+        uri: https://github.com/dwojciec/spring-boot-hello.git
+      contextDir: openshift
+    strategy:
+      type: Docker
+      dockerStrategy:
+        from:
+          kind: ImageStreamTag
+          name: openjdk18-openshift:latest
+          namespace: openshift
+    triggers:
+    - type: ImageChange
+      imageChange: {}
+    - type: ConfigChange
