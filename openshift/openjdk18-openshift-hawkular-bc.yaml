@@ -26,7 +26,7 @@ Items:
       type: Git
       git:
         ref: master
-        uri: https://github.com/dwojciec/spring-boot-hello.git
+        uri: https://github.com/mry/spring-boot-hello.git
       contextDir: openshift
     strategy:
       type: Docker
